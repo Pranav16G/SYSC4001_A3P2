@@ -1,0 +1,10 @@
+Mutual exclusion -> Only one TA can access the rubric at a time.
+                    Semaphore locks are used during rubric modification restricting the other TA from manipulating the rubric.txt
+
+Bounded waiting -> This code uses a code structure to that of the reader writer problem, hence prevents the reader or writer from startvation
+                   or not having the oppurtunity to write onto the common shared space file.
+
+Progress -> Similar to reader writer, if there is no new process in critical section a process is allowed to 
+            to enter. In this way there is no TA left without any question to grade, and there is no clash between 
+            2/ more TA trying to modify the same file, achieved by using semophore locks which are released once the 
+            desired work is done.
